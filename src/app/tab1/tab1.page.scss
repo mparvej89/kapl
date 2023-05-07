@@ -1,0 +1,65 @@
+.slider {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+ion-card {
+   // height: 90px;
+    border-radius: 20px;
+}
+
+ion-thumbnail {
+    img {
+        border-radius: 10px;
+    }
+}
+
+.services {
+    background: #993223;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 8px;
+
+    ion-img {
+        border: 3px solid #fff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+}
+
+.service-title {
+    font-size: 12px;
+}
+
+.latest-news {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    ion-text {
+        color: #993223;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.latest-news-sl {
+    height: 90px;
+    margin: 7px 7px;
+
+    ion-img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.latest-swiper {
+    .swiper-wrapper {
+        .swiper-slide {
+            display: block;
+        }
+
+    }
+}

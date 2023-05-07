@@ -1,0 +1,63 @@
+<ion-content class="ion-padding bgImg">
+  <div id="container">
+    <ion-img src="../../assets/logo.png"></ion-img>
+  </div>
+
+  <div style="text-align:center; color: #9a3223; font-weight: bold;">
+    <ion-text>
+      <h2>{{'common-words.signup' | translate}}</h2>
+    </ion-text>
+  </div>
+
+  <ion-card>
+    <ion-card-content>
+  <form [formGroup]="signupForm">
+
+    <div class="input-div">
+      <ion-label>{{'common-words.fullname' | translate}}</ion-label>
+      <ion-item lines="none">
+        <ion-input type="text" name="fullname" formControlName="fullname" [placeholder]="getTranslation('placeholder-text.fullname')"></ion-input>
+      </ion-item>
+      <div *ngIf="errorControl.fullname.touched && errorControl.fullname.errors?.required" class="v-error">
+       {{'error-message.fullname' | translate}}
+      </div>
+    </div>
+
+    <div class="input-div">
+      <ion-label>{{'common-words.email' | translate}}</ion-label>
+      <ion-item lines="none">
+        <ion-input type="email" name="email" formControlName="email" [placeholder]="getTranslation('placeholder-text.email')"></ion-input>
+      </ion-item>
+      <div *ngIf="errorControl.email.touched && errorControl.email.errors?.required" class="v-error">
+       {{'error-message.email' | translate}}
+      </div>
+    </div>
+
+    <div class="input-div">
+      <ion-label>{{'common-words.password' | translate}}</ion-label>
+      <ion-item lines="none">
+        <ion-input type="password" name="password" formControlName="password" [placeholder]="getTranslation('placeholder-text.password')"></ion-input>
+      </ion-item>
+      <div *ngIf="errorControl.password.touched && errorControl.password.errors?.required" class="v-error">
+        {{'error-message.password' | translate}}
+      </div>
+    </div>
+  </form>
+
+  <div class="btn">
+    <ion-button color="primary" expand="block" translate (click)="signUp()"
+      [disabled]="signupForm.invalid">common-buttons.signup
+    </ion-button>
+  </div>
+
+  <div class="input-div" style="text-align: center;">
+    <ion-label>{{'common-words.forgot-password' | translate}}</ion-label>
+  </div>
+  </ion-card-content>
+  </ion-card>
+
+  <div class="btn-signup">
+    <ion-text>{{'common-words.is-account' | translate}} ? <ion-label color="primary" class="signup" (click)="login()">{{'common-buttons.login' | translate}}</ion-label></ion-text>
+  </div>
+</ion-content>
+

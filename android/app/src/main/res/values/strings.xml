@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">kpl</string>
+    <string name="title_activity_main">kpl</string>
+    <string name="package_name">io.kapl.app</string>
+    <string name="custom_url_scheme">io.kapl.app</string>
+</resources>

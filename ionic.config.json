@@ -1,0 +1,7 @@
+{
+  "name": "kpl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

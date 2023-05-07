@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="../assets/img/profile.jpeg" />
+        </ion-avatar>
+        <div class="user-name">
+          <ion-text>Muhammad Abdullah</ion-text>
+        </div>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+          <ion-item  (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
+            detail="false" [class.selected]="this.router.isActive(p.url, false)">
+           <img [src]="p.icon" style="height: 20px;
+           width: 20px;
+           margin-right: 20px;"/>
+            <ion-label>{{ p.title | translate}}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet [dir]="translate.currentLang=='en' ? 'ltr' : 'rtl'" id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

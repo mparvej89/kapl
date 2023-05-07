@@ -1,0 +1,104 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-img src="../../assets/img/logo.png" style="height:50px ;"></ion-img>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="full-back">
+  <swiper #swiper [config]="config" [dir]="translate.currentLang=='en' ? 'ltr' : 'rtl'" style="margin-top:15px">
+    <ng-template swiperSlide *ngFor="let slide of slideBanners">
+      <img [src]="slide.url" class="slider">
+    </ng-template>
+  </swiper>
+
+
+  <div class="ion-padding">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <div class="services" (click)="libraryPublication()">
+          <ion-img src="../../assets/icon/library-publications.svg"></ion-img>
+        </div>
+        <ion-text class="service-title">Library Publications</ion-text>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <div class="services">
+          <ion-img src="../../assets/icon/library-publications.svg"></ion-img>
+        </div>
+        <ion-text class="service-title">Social Collection</ion-text>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <div class="services">
+          <ion-img src="../../assets/icon/library-publications.svg"></ion-img>
+        </div>
+        <ion-text class="service-title">Conference & Seminar</ion-text>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <div class="services" (click)="eSerice()">
+          <ion-img src="../../assets/icon/library-publications.svg"></ion-img>
+        </div>
+        <ion-text class="service-title">E-Service</ion-text>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="ion-padding latest-news">
+    <ion-text>Latest News</ion-text>
+    <ion-text (click)="seeAllNews()">See All</ion-text>
+  </div>
+
+  <swiper #swiper [config]="configLatestNews" [dir]="translate.currentLang=='en' ? 'ltr' : 'rtl'" class="latest-swiper">
+    <ng-template swiperSlide *ngFor="let news of latestNews">
+      <ion-card class="latest-news-sl">
+        <ion-img [src]="news?.path"></ion-img>
+      </ion-card>
+      <div style="overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-left: 15px;
+      width:115px;">
+        <ion-text class="service-title" *ngIf="translate.currentLang=='en'">{{news?.title_english}}</ion-text>
+        <ion-text class="service-title" *ngIf="translate.currentLang=='ar'">{{news?.title_arabic}}</ion-text>
+      </div>
+      
+    </ng-template> 
+  </swiper>
+  
+    <div class="ion-padding latest-news">
+      <ion-text>Events</ion-text>
+      <ion-text>See All</ion-text>
+    </div>
+
+    <swiper #swiper [config]="configLatestNews" [dir]="translate.currentLang=='en' ? 'ltr' : 'rtl'" class="latest-swiper">
+      <ng-template swiperSlide *ngFor="let slide of slideBanners">
+        <ion-card class="latest-news-sl">
+          <ion-img [src]="slide.url"></ion-img>
+        </ion-card>
+        <ion-text class="service-title">English content coming soon</ion-text>
+      </ng-template> 
+    </swiper>
+
+
+    <div class="ion-padding latest-news">
+      <ion-text>Announcement</ion-text>
+      <ion-text>See All</ion-text>
+    </div>
+
+    <swiper #swiper [config]="configLatestNews" [dir]="translate.currentLang=='en' ? 'ltr' : 'rtl'" class="latest-swiper">
+      <ng-template swiperSlide *ngFor="let slide of slideBanners">
+        <ion-card class="latest-news-sl">
+          <ion-img [src]="slide.url"></ion-img>
+        </ion-card>
+        <ion-text class="service-title">English content coming soon</ion-text>
+      </ng-template> 
+    </swiper>
+
+
+
+
+</ion-content>

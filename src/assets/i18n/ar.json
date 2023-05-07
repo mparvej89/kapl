@@ -1,0 +1,25 @@
+{
+    "common-words": {
+        "email":"البريد الإلكتروني",
+        "password":"كلمة المرو",
+        "forgot-password":"هل نسيت كلمة السر",
+        "fullname":"الاسم الكامل",
+        "is-account":"لديك حساب بالفعل",
+        "is-not-account":"ليس لديك حساب",
+        "signup":"اشتراك"
+    },
+    "common-buttons":{
+        "login":"تسجيل الدخول",
+        "signup":"A Sign Up"
+    },
+    "placeholder-text":{
+        "email":"أدخل بريدك الإلكتروني",
+        "password":"ادخل رقمك السري",
+        "fullname":"أدخل اسمك الكامل"
+    },
+    "error-message":{
+        "email":"البريد الالكتروني مطلوب",
+        "password":"كلمة المرور مطلوبة",
+        "fullname":"الإسم الكامل ضروري"
+    }
+}

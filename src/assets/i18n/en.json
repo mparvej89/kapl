@@ -1,0 +1,25 @@
+{
+    "common-words": {
+        "email":"Email",
+        "password":"Password",
+        "forgot-password":"Forgot Password",
+        "fullname":"Full Name",
+        "is-account":"Already have account",
+        "is-not-account":"Don't have account",
+        "signup":"Sign Up"
+    },
+    "common-buttons":{
+        "login":"Login",
+        "signup":"Sign Up"
+    },
+    "placeholder-text":{
+        "email":"Enter Your Email",
+        "password":"Enter Your Password",
+        "fullname":"Enter Your Full Name"
+    },
+    "error-message":{
+        "email":"Email is required.",
+        "password":"Password is required.",
+        "fullname":"Full Name is required"
+    }
+}
